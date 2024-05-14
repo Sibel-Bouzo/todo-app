@@ -1,0 +1,143 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: #f8f8f8;
+    --foreground: #153b56;
+
+    --card: #ffffff;
+    --card-foreground: #153b56;
+
+    --popover: #1ba5d3;
+    --popover-foreground: #ffffff;
+
+    --primary: #1ba5d3;
+    --primary-foreground: #ffffff;
+
+    --secondary: #f6f6f6;
+
+    --destructive: #f44336;
+    --destructive-foreground: #fe764b;
+
+    --border: 214.3 31.8% 91.4%;
+    --input: 214.3 31.8% 91.4%;
+    --ring: 222.2 84% 4.9%;
+
+    --radius: 0.5rem;
+
+    --transition-duration: 0.3s;
+  }
+
+  .dark {
+    --background: hsl(240 10% 3.9%);
+    --foreground: hsl(0 0% 98%);
+    --card: hsl(240 10% 3.9%);
+    --card-foreground: hsl(240 10% 3.9%);
+    --popover: #1ba5d3;
+    --popover-foreground: hsl(0 0% 98%);
+    --primary: #1ba5d3;
+    --primary-foreground: hsl(240 5.9% 10%);
+    --secondary: #f6f6f6;
+
+    --destructive: #f44336;
+    --destructive-foreground: #fe764b;
+  }
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Comfortaa;
+  background-color: var(--background);
+  color: var(--foreground);
+}
+html {
+  scroll-behavior: smooth;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+::-webkit-scrollbar-track {
+  background-color: var(--background);
+}
+::-webkit-scrollbar-thumb {
+  background-color: var(--popover);
+  border-radius: 40px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background-color: #1882a5;
+}
+
+.container {
+  background-color: var(--background);
+  min-height: 100vh;
+  width: 100%;
+  padding: 2rem 5rem 2rem 3rem;
+  margin-right: 0;
+  overflow: hidden;
+}
+
+.nav-left {
+  width: 250px;
+  box-shadow: 0 0 10px #ddd;
+  min-height: 100vh;
+}
+.nav-left li {
+  margin-bottom: 0.5rem;
+  border-radius: 4px;
+  transition: var(--transition-duration);
+  text-align: start;
+  padding: 7px;
+  cursor: pointer;
+}
+
+.nav-left li:not(:last-child):hover,
+.nav-left li:not(:last-child).active {
+  background-color: #f6f6f6;
+  color: var(--card-foreground);
+  font-weight: bolder;
+}
+.dark .nav-left li:not(:last-child):hover,
+.dark .nav-left li:not(:last-child).active {
+  background-color: #c4c0c02c;
+  color: var(--popover);
+  font-weight: bolder;
+}
+
+.nav-left:last-child {
+  position: absolute;
+  bottom: 0;
+}
+
+.nav-left li span {
+  margin-left: 0.8rem;
+}
+
+h2 {
+  font-size: 1.5rem;
+}
+h3 {
+  font-size: 1.2rem;
+}
+@media (min-width: 1400px) {
+  .container {
+    max-width: unset;
+  }
+}
+@media (max-width: 992px) {
+  .nav-left {
+    width: 62px;
+    padding: 12px;
+  }
+  .nav-left span,
+  .logo h2 {
+    display: none;
+  }
+}

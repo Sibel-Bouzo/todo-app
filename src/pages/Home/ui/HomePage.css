@@ -1,0 +1,50 @@
+.container .premium-add {
+  background: rgba(71, 74, 255, 0.54);
+  background: -webkit-linear-gradient(
+    71deg,
+    rgba(71, 74, 255, 0.54) 0%,
+    #ecf3ff 100%
+  );
+  background: linear-gradient(71deg, rgba(71, 74, 255, 0.54) 0%, #ecf3ff 100%);
+  padding: 2rem;
+  cursor: pointer;
+  border-radius: 4px;
+  text-transform: capitalize;
+  color: var(--card);
+  font-weight: bold;
+  -webkit-box-shadow: -1.5px 4.5px 11.5px 0.5px #dddddd;
+  -moz-box-shadow: -1.5px 4.5px 11.5px 0.5px #dddddd;
+  box-shadow: -1.5px 4.5px 11.5px 0.5px #dddddd;
+}
+.dark .container .premium-add {
+  background: rgba(34, 34, 37, 0.86);
+  background: -webkit-linear-gradient(
+    58deg,
+    rgba(34, 34, 37, 0.86) 0%,
+    rgba(214, 214, 214, 0.33) 100%
+  );
+  background: linear-gradient(
+    58deg,
+    rgba(34, 34, 37, 0.86) 0%,
+    rgba(214, 214, 214, 0.33) 100%
+  );
+}
+.container .premium-add .premium-title {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+.container .premium-add .premium-title span {
+  margin-left: 1rem;
+}
+@media (max-width: 600px) {
+  .container .premium-add {
+    padding: 1.2rem;
+  }
+  .container .premium-add .premium-title {
+    font-size: 1rem;
+  }
+  .container .premium-add .premium-title p {
+    font-size: 0.5rem;
+  }
+}

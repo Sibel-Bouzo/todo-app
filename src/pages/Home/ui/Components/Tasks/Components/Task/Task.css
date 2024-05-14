@@ -1,0 +1,104 @@
+.task {
+  margin-left: 0;
+  margin-top: 1rem;
+  padding: 0.5rem 1rem;
+  position: relative;
+  background-color: var(--card);
+  border-radius: 10px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+}
+.task > div {
+  padding: 15px;
+}
+.task > div:not(:last-child) {
+  margin-right: 10px;
+}
+.task .task-info {
+  flex: 1;
+  border-right: 2px solid var(--secondary);
+  border-left: 2px solid var(--secondary);
+}
+.task .task-info .task-info-headers {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.task .task-info .task-info-headers h3 {
+  font-size: 1.1rem;
+  margin-bottom: 0.1rem;
+  font-weight: 500;
+}
+
+.task .task-info .task-info-headers h4 {
+  font-size: 0.9rem;
+}
+
+.task p {
+  font-size: 0.85rem;
+  opacity: 0.6;
+  width: 100%;
+  overflow-wrap: anywhere;
+  text-align: justify;
+}
+.task .task-buttons {
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+.task .task-buttons button {
+  cursor: pointer;
+  padding: 5px;
+  font-size: 0.8rem;
+  font-weight: bold;
+}
+
+@media (max-width: 767px) {
+  .task .task-info .task-info-headers {
+    flex-direction: column;
+    align-items: start;
+  }
+  .task .task-info .task-info-headers h3 {
+    overflow-wrap: anywhere;
+  }
+}
+@media (max-width: 600px) {
+  .task {
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+  }
+  .task .task-cat {
+    width: 100%;
+  }
+  .task .task-info {
+    width: 100%;
+    margin: 0.5rem;
+    border-left: unset;
+    border-right: unset;
+    border-top: 2px solid var(--secondary);
+    border-bottom: 2px solid var(--secondary);
+  }
+  .task .task-info .task-info-headers h3 {
+    font-size: 1rem;
+  }
+  .task .task-info .task-info-headers h4 {
+    font-size: 0.85rem;
+  }
+  .task p {
+    font-size: 0.8rem;
+  }
+  .task .task-buttons {
+    width: 100%;
+    flex-direction: row;
+  }
+  .task > div:not(:last-child) {
+    margin-right: 0;
+  }
+}

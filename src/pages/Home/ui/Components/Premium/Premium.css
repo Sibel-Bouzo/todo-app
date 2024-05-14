@@ -1,0 +1,126 @@
+.pricing {
+  position: relative;
+}
+.premium-plans {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 40px;
+}
+.premium-plans .box {
+  position: relative;
+  background-color: var(--card);
+  -webkit-box-shadow: box-shadow;
+  -moz-box-shadow: box-shadow;
+  box-shadow: 0 12px 20px 0 rgb(0 0 0 / 13%), 0 2px 4px 0 rgb(0 0 0 / 12%);
+  transition: var(--transition-duration);
+  text-align: center;
+  z-index: 1;
+}
+.premium-plans .box::before,
+.premium-plans .box::after {
+  content: "";
+  position: absolute;
+  background-color: var(--secondary);
+  width: 0;
+  height: 50%;
+  z-index: -1;
+  transition: var(--transition-duration);
+}
+.dark .premium-plans .box::before,
+.dark .premium-plans .box::after {
+  background-color: #202020;
+}
+.premium-plans .box::before {
+  left: 0;
+  top: 0;
+}
+.premium-plans .box::after {
+  right: 0;
+  bottom: 0;
+}
+.premium-plans .box:hover::after,
+.premium-plans .box:hover::before {
+  width: 100%;
+}
+
+.premium-plans .box h3 {
+  margin: 20px 0;
+  padding: 10px 0;
+  font-size: 23px;
+  font-weight: bolder;
+  text-transform: uppercase;
+}
+.premium-plans .popular .label {
+  position: absolute;
+  writing-mode: vertical-rl;
+  background-color: var(--popover);
+  color: var(--card);
+  font-size: 18px;
+  font-weight: bold;
+  text-transform: capitalize;
+  padding: 10px 10px 30px;
+  right: 20px;
+  top: -2px;
+}
+.premium-plans .popular .label::after {
+  content: "";
+  position: absolute;
+  border: 20px solid;
+  border-color: transparent transparent var(--card) transparent;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.premium-plans .popular:hover .label:after {
+  border-color: transparent transparent #f6f6f6 transparent;
+}
+.dark .premium-plans .popular:hover .label:after {
+  border-color: transparent transparent #202020 transparent;
+}
+
+.premium-plans .box .info {
+  margin-bottom: 20px;
+}
+
+.premium-plans .box span {
+  display: block;
+}
+.premium-plans .box span:first-child {
+  margin-bottom: 5px;
+  font-size: 50px;
+  font-weight: bolder;
+  color: var(--main-color);
+}
+.premium-plans .box span:last-child {
+  color: #777;
+  text-transform: capitalize;
+}
+.premium-plans ul {
+  text-align: left;
+}
+.premium-plans ul li {
+  border-top: 1px solid #eee;
+  padding: 20px;
+}
+
+.premium-plans .box button {
+  display: block;
+  width: fit-content;
+  margin: 20px auto 30px;
+  padding: 10px 15px;
+  text-transform: capitalize;
+  color: var(--main-color);
+  border: 2px solid var(--popover);
+  border-radius: 5px;
+  transition: var(--transition-duration);
+  font-weight: bold;
+}
+.premium-plans .box:hover button {
+  color: var(--popover);
+}
+@media (min-width: 1200px) {
+  .premium-plans .popular {
+    top: -15px;
+  }
+}

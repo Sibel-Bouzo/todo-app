@@ -1,0 +1,75 @@
+.loading {
+  position: absolute;
+}
+.loading h2 {
+  font-size: 2.8rem;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 1.5rem;
+  margin-top: -2rem;
+}
+.loading-progress {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  direction: ltr;
+  padding: 1px;
+  position: absolute;
+  bottom: 0;
+}
+.loading-bar {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  border-radius: 25px;
+  width: 50%;
+  height: 0.75rem;
+  background-color: #e9e9e9;
+  background: linear-gradient(90deg, #389cb6 0%, #81ee73 100%) left/0% 100%
+    no-repeat #e9e9e9;
+  animation: progress 3s linear;
+}
+.loading .logo {
+  width: 40%;
+  margin-left: auto;
+  margin-right: auto;
+}
+.loading .logo img {
+  width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+}
+@keyframes progress {
+  100% {
+    background-size: 100% 100%;
+  }
+}
+
+@keyframes fill-loading {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 100%;
+  }
+}
+
+@media (max-width: 992px) {
+  .loading h2 {
+    margin-top: -1.5rem;
+    font-size: 2.5rem;
+  }
+}
+@media (max-width: 767px) {
+  .loading h2 {
+    margin-top: -1.5rem;
+    font-size: 2rem;
+  }
+}
+@media (max-width: 600px) {
+  .loading h2 {
+    font-size: 1.5rem;
+    margin-top: -0.5rem;
+  }
+}
