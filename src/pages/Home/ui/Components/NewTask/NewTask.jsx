@@ -25,7 +25,7 @@ export const NewTask = () => {
     toast("Task Added", {
       icon: <box-icon name="check" color="#36ba45"></box-icon>,
     });
-    navigate("/");
+    navigate("/todo-app");
   };
 
   const navigate = useNavigate();

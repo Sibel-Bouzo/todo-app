@@ -28,7 +28,7 @@ export const categories = [
 export const navlinks = [
   {
     icon: "home",
-    href: "/",
+    href: "/todo-app",
     title: "Home",
   },
   {
