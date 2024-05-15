@@ -13,7 +13,7 @@ export const Nav = () => {
       className="relative top-0 left-0 px-3 py-5 bg-card text-foreground nav-left dark:shadow-none dark:border-r
      dark:border-white dark:border-solid"
     >
-      <div className="fixed top-0 left-0 px-1 py-5 sm:px-2 bg-card text-foreground lg:pl-5 min-h-[100vh]">
+      <div className="fixed top-0 left-0 px-2 py-5 sm:px-2 bg-card text-foreground lg:pl-5 min-h-[100vh]">
         <Header />
         <ul className="mt-2 h-full">
           {navlinks.map((link, index) => {
