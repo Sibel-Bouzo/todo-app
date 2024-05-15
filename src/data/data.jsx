@@ -28,17 +28,17 @@ export const categories = [
 export const navlinks = [
   {
     icon: "home",
-    href: "/todo-app",
+    href: "/todo-app/",
     title: "Home",
   },
   {
     icon: "plus",
-    href: "/newtask",
+    href: "/todo-app/newtask",
     title: "Add Task",
   },
   {
     icon: "bell",
-    href: "/notifications",
+    href: "/todo-app/notifications",
     title: "Notifications",
   },
 ];

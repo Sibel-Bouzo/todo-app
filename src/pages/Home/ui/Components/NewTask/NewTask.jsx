@@ -25,7 +25,7 @@ export const NewTask = () => {
     toast("Task Added", {
       icon: <box-icon name="check" color="#36ba45"></box-icon>,
     });
-    navigate("/todo-app");
+    navigate("/todo-app/");
   };
 
   const navigate = useNavigate();
@@ -85,7 +85,7 @@ export const NewTask = () => {
             })}
           </div>
           <div className="new-task-buttons">
-            <Link to="/todo-app">
+            <Link to="/todo-app/">
               <button className="back-arrow py-0">
                 <box-icon
                   name="left-arrow-alt"

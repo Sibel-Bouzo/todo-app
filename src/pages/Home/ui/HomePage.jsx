@@ -11,7 +11,7 @@ export const HomePage = () => {
     <>
       <Nav />
       <main className="container">
-        <Link to="/premium">
+        <Link to="/todo-app/premium">
           <div className="premium-add dark:shadow-none dark:text-foreground">
             <div className="premium-title">
               <h3>Go Premium!</h3>
