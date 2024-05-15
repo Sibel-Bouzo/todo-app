@@ -58,7 +58,7 @@ export const NewTask = () => {
               mode="single"
               selected={date}
               onSelect={setDate}
-              className="rounded-md border "
+              className="rounded-md border overflow-auto"
             />
           </div>
           <h3 className="mt-2 font-semibold">Select Category</h3>
