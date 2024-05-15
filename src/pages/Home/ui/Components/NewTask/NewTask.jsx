@@ -85,7 +85,7 @@ export const NewTask = () => {
             })}
           </div>
           <div className="new-task-buttons">
-            <Link to="/">
+            <Link to="/todo-app">
               <button className="back-arrow py-0">
                 <box-icon
                   name="left-arrow-alt"

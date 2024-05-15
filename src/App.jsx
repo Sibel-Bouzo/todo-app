@@ -28,7 +28,7 @@ function App() {
         <LoadingPage />
       ) : (
         <Routes>
-          <Route index path="/" element={<HomePage />} />
+          <Route index path="/todo-app" element={<HomePage />} />
           <Route path="/newtask" element={<NewTask />} />
           <Route path="/premium" element={<Premium />} />
           <Route path="/notifications" element={<Notifications />} />
