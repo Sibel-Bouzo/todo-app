@@ -13,20 +13,27 @@ export const Notifications = () => {
       <main className="container text-foreground">
         <div className="flex flex-col sm:flex-row justify-between align-middle font-bold w-full dark:text-popover">
           <h2>Notifications</h2>
-          <button
-            className="font-normal text-start mt-1 sm:mt-0"
-            onClick={() => {
-              clearNotifications(),
-                notifications.length > 0 &&
-                  toast("Notifications Cleared", {
-                    icon: (
-                      <box-icon name="x" color="var(--destructive)"></box-icon>
-                    ),
-                  });
-            }}
-          >
-            Clear All
-          </button>
+          {notifications.length > 0 ? (
+            <button
+              className="font-normal text-start mt-1 sm:mt-0"
+              onClick={() => {
+                clearNotifications(),
+                  notifications.length > 0 &&
+                    toast("Notifications Cleared", {
+                      icon: (
+                        <box-icon
+                          name="x"
+                          color="var(--destructive)"
+                        ></box-icon>
+                      ),
+                    });
+              }}
+            >
+              Clear All
+            </button>
+          ) : (
+            ""
+          )}
         </div>
         <div className="mt-5 bg-card rounded p-4 dark:border dark:border-white dark:border-solid dark:shadow-none">
           {notifications.length < 1 ? (

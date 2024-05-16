@@ -67,6 +67,7 @@ const AppProvider = ({ children }) => {
   const clearTasks = () => {
     setTasks([]);
     showNotification("All tasks cleared successfully.");
+    localStorage.removeItem("tasks");
   };
 
   const showNotification = (message) => {
@@ -102,6 +103,7 @@ const AppProvider = ({ children }) => {
 
   const clearNotifications = () => {
     setNotifications([]);
+    localStorage.removeItem("notifications");
   };
 
   const toggleDarkMode = () => {
