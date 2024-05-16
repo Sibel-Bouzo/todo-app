@@ -2,7 +2,7 @@ import "./LoadingPage.css";
 
 export const LoadingPage = () => {
   return (
-    <div className="container w-full ">
+    <div className="container w-full">
       <div className="loading absolute top-[40%] translate-y-[-50%] left-[47%] translate-x-[-50%]">
         <div className="logo">
           <img src="images/logo.png" alt="logo" />
