@@ -141,3 +141,12 @@ h3 {
     display: none;
   }
 }
+@media (max-width: 400px) {
+  h2 {
+    font-size: 1.2rem;
+  }
+  .container {
+    padding: 1.5rem 1rem 2rem 1rem;
+    margin-left: 1px;
+  }
+}

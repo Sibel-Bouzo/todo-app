@@ -111,3 +111,13 @@
     padding: 0.8rem 1rem;
   }
 }
+@media (max-width: 400px) {
+  .new-task .categories {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    gap: 1rem;
+  }
+  .new-task .new-task-buttons .create-task {
+    padding: 0.8rem 1rem;
+  }
+}

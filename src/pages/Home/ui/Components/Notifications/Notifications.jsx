@@ -11,10 +11,10 @@ export const Notifications = () => {
     <>
       <Nav />
       <main className="container text-foreground">
-        <div className="flex flex-row justify-between align-middle font-bold w-full dark:text-popover">
+        <div className="flex flex-col sm:flex-row justify-between align-middle font-bold w-full dark:text-popover">
           <h2>Notifications</h2>
           <button
-            className="font-normal"
+            className="font-normal text-start"
             onClick={() => {
               clearNotifications(),
                 notifications.length > 0 &&
