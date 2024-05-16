@@ -14,7 +14,7 @@ export const Notifications = () => {
         <div className="flex flex-col sm:flex-row justify-between align-middle font-bold w-full dark:text-popover">
           <h2>Notifications</h2>
           <button
-            className="font-normal text-start"
+            className="font-normal text-start mt-1 sm:mt-0"
             onClick={() => {
               clearNotifications(),
                 notifications.length > 0 &&
